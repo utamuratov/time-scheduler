@@ -1,0 +1,38 @@
+<div cdkDropListGroup>
+  <div style="display: flex">
+    @for (day of schedule; track day) {
+    <div class="example-container">
+      <h2>{{ day.name }}</h2>
+
+      @for (time of day.value; track time) {
+      <div
+        cdkDropList
+        [cdkDropListData]="time"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)"
+      >
+        @for (item of time; track item) {
+        <div class="example-box" cdkDrag>{{ item }}</div>
+        }
+      </div>
+      }
+    </div>
+    }
+
+    <div class="example-container">
+      <h2>Subjects</h2>
+
+      <div
+        cdkDropList
+        [cdkDropListData]="subjects"
+        class="example-list"
+        style="height: auto; min-height: 40px"
+        (cdkDropListDropped)="drop($event)"
+      >
+        @for (item of subjects; track item) {
+        <div class="example-box" cdkDrag>{{ item }}</div>
+        }
+      </div>
+    </div>
+  </div>
+</div>
