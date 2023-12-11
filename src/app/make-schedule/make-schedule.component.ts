@@ -1,5 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  OnInit,
+  inject,
+} from '@angular/core';
 import {
   CdkDragDrop,
   moveItemInArray,
@@ -8,6 +13,9 @@ import {
   CdkDropList,
   CdkDropListGroup,
 } from '@angular/cdk/drag-drop';
+import { ScheduleService } from '../services/schedule.service';
+import { ActivatedRoute } from '@angular/router';
+import { Subject } from '../models/subject.entity';
 
 @Component({
   selector: 'app-make-schedule',
@@ -17,8 +25,8 @@ import {
   styleUrl: './make-schedule.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MakeScheduleComponent {
-  schedule: { name: string; value: string[][] }[] = [
+export class MakeScheduleComponent implements OnInit {
+  schedule: { name: string; value: Subject[][] }[] = [
     { name: 'Monday', value: [[], [], [], [], [], []] },
     { name: 'Tuesday', value: [[], [], [], [], [], []] },
     { name: 'Wednesday', value: [[], [], [], [], [], []] },
@@ -26,46 +34,31 @@ export class MakeScheduleComponent {
     { name: 'Friday', value: [[], [], [], [], [], []] },
     { name: 'Saturday', value: [[], [], [], [], [], []] },
   ];
-  monday = [[], [], [], [], [], []];
 
-  mon1: string[] = [];
-  mon2: string[] = [];
-  mon3: string[] = [];
-  tues1: string[] = [];
-  tues2: string[] = [];
+  subjects: Subject[] = [];
 
-  subjects = [
-    'Math',
-    'Math',
-    'Math',
-    'Math',
-    'Science',
-    'Science',
-    'Science',
-    'Science',
-    'English',
-    'English',
-    'English',
-    'English',
-    'History',
-    'History',
-    'History',
-    'History',
-    'Spanish',
-    'Spanish',
-    'Spanish',
-    'French',
-    'French',
-    'French',
-    'French',
-    'Java',
-    'Java',
-    'Java',
-    'PHP',
-    'Python',
-  ];
+  $schedule = inject(ScheduleService);
+  route = inject(ActivatedRoute);
+  groupdId = +this.route.snapshot.params['groupId'];
 
-  drop(event: CdkDragDrop<string[]>) {
+  ngOnInit(): void {
+    this.$schedule.getSubjectsByGroup(this.groupdId).subscribe((subjects) => {
+      this.$schedule.getSubjects().subscribe((allSubjects) => {
+        this.subjects = allSubjects.filter((subject) =>
+          subjects.find((w) => w.subjectId === subject.id)
+        );
+      });
+    });
+    this.$schedule.getSchedulesByGroup(this.groupdId).subscribe((schedules) => {
+      schedules.forEach((schedule) => {
+        const subject = this.subjects.find((w) => w.id === schedule.subjectId);
+        if (subject)
+          this.schedule[schedule.day].value[schedule.order].push(subject);
+      });
+    });
+  }
+
+  drop(event: CdkDragDrop<Subject[]>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(
         event.container.data,
