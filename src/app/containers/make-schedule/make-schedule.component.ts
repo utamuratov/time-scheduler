@@ -13,9 +13,9 @@ import {
   CdkDropList,
   CdkDropListGroup,
 } from '@angular/cdk/drag-drop';
-import { ScheduleService } from '../services/schedule.service';
+import { ScheduleService } from '../../services/schedule.service';
 import { ActivatedRoute } from '@angular/router';
-import { Subject } from '../models/subject.entity';
+import { Subject } from '../../models/subject.entity';
 
 @Component({
   selector: 'app-make-schedule',

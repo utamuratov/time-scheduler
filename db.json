@@ -1,54 +1,54 @@
 {
   "teachers": [
     {
-      "id": 1,
       "firstName": "John",
-      "lastName": "Smith"
+      "lastName": "John",
+      "id": 1
     },
     {
-      "id": 2,
-      "firstName": "Jane",
-      "lastName": "Doe"
+      "firstName": "Smith",
+      "lastName": "Smith",
+      "id": 3
     },
     {
-      "id": 3,
-      "firstName": "Bob",
-      "lastName": "Smith"
+      "firstName": "sfds",
+      "lastName": "fsdfs",
+      "id": 4
     },
     {
-      "id": 4,
-      "firstName": "Sally",
-      "lastName": "Doe"
+      "firstName": "ddd",
+      "lastName": "ddd",
+      "id": 5
     },
     {
-      "id": 5,
-      "firstName": "John",
-      "lastName": "Doe"
+      "firstName": "fd",
+      "lastName": "fdfd",
+      "id": 6
     },
     {
-      "id": 6,
-      "firstName": "Jane",
-      "lastName": "Smith"
+      "firstName": "rer",
+      "lastName": "rer",
+      "id": 7
     },
     {
-      "id": 7,
-      "firstName": "Bob",
-      "lastName": "Doe"
+      "firstName": "dsd",
+      "lastName": "dsd",
+      "id": 8
     },
     {
-      "id": 8,
-      "firstName": "Sally",
-      "lastName": "Smith"
+      "firstName": "Bek",
+      "lastName": "BEk",
+      "id": 9
     }
   ],
   "subjects": [
     {
       "id": 1,
-      "name": "Math"
+      "name": "QA"
     },
     {
       "id": 2,
-      "name": "Science"
+      "name": "Math"
     },
     {
       "id": 3,
@@ -56,23 +56,51 @@
     },
     {
       "id": 4,
-      "name": "History"
-    },
-    {
-      "id": 5,
-      "name": "Art"
-    },
-    {
-      "id": 6,
       "name": "Music"
     },
     {
+      "id": 5,
+      "name": "Russian"
+    },
+    {
+      "id": 6,
+      "name": "IT"
+    },
+    {
       "id": 7,
-      "name": "PE"
+      "name": "IS"
     },
     {
       "id": 8,
-      "name": "Health"
+      "name": "Physics"
+    },
+    {
+      "name": "Motherlang",
+      "id": 9
+    },
+    {
+      "name": "Java",
+      "id": 10
+    },
+    {
+      "name": "JS",
+      "id": 11
+    },
+    {
+      "name": "Economics",
+      "id": 12
+    },
+    {
+      "name": "History",
+      "id": 13
+    },
+    {
+      "name": "Art",
+      "id": 14
+    },
+    {
+      "name": "Design",
+      "id": 15
     }
   ],
   "rooms": [
@@ -170,6 +198,11 @@
       "id": 19,
       "name": "Room 19",
       "type": "Classroom"
+    },
+    {
+      "name": "Room 20",
+      "type": "wewe",
+      "id": 20
     }
   ],
   "groups": [
@@ -269,291 +302,7 @@
       "roomId": 19
     }
   ],
-  "teacherSubject": [
-    {
-      "id": 1,
-      "teacherId": 1,
-      "subjectId": 1,
-      "hours": 10
-    },
-    {
-      "id": 2,
-      "teacherId": 1,
-      "subjectId": 2,
-      "hours": 10
-    },
-    {
-      "id": 3,
-      "teacherId": 1,
-      "subjectId": 3,
-      "hours": 10
-    },
-    {
-      "id": 4,
-      "teacherId": 3,
-      "subjectId": 4,
-      "hours": 10
-    },
-    {
-      "id": 5,
-      "teacherId": 3,
-      "subjectId": 5,
-      "hours": 10
-    },
-    {
-      "id": 6,
-      "teacherId": 3,
-      "subjectId": 6,
-      "hours": 10
-    },
-    {
-      "id": 7,
-      "teacherId": 4,
-      "subjectId": 7,
-      "hours": 10
-    },
-    {
-      "id": 8,
-      "teacherId": 4,
-      "subjectId": 8,
-      "hours": 10
-    },
-    {
-      "id": 9,
-      "teacherId": 2,
-      "subjectId": 1,
-      "hours": 10
-    },
-    {
-      "id": 10,
-      "teacherId": 2,
-      "subjectId": 2,
-      "hours": 10
-    },
-    {
-      "id": 11,
-      "teacherId": 5,
-      "subjectId": 3,
-      "hours": 10
-    },
-    {
-      "id": 12,
-      "teacherId": 5,
-      "subjectId": 4,
-      "hours": 10
-    },
-    {
-      "id": 13,
-      "teacherId": 5,
-      "subjectId": 5,
-      "hours": 10
-    },
-    {
-      "id": 14,
-      "teacherId": 6,
-      "subjectId": 6,
-      "hours": 10
-    },
-    {
-      "id": 15,
-      "teacherId": 6,
-      "subjectId": 7,
-      "hours": 10
-    },
-    {
-      "id": 16,
-      "teacherId": 6,
-      "subjectId": 8
-    }
-  ],
-  "subjectGroup": [
-    {
-      "id": 1,
-      "subjectId": 1,
-      "groupId": 1,
-      "hours": 2
-    },
-    {
-      "id": 2,
-      "subjectId": 2,
-      "groupId": 1,
-      "hours": 2
-    },
-    {
-      "id": 3,
-      "subjectId": 3,
-      "groupId": 1,
-      "hours": 2
-    },
-    {
-      "id": 4,
-      "subjectId": 4,
-      "groupId": 2,
-      "hours": 2
-    },
-    {
-      "id": 5,
-      "subjectId": 5,
-      "groupId": 2,
-      "hours": 2
-    },
-    {
-      "id": 6,
-      "subjectId": 6,
-      "groupId": 2,
-      "hours": 2
-    },
-    {
-      "id": 7,
-      "subjectId": 7,
-      "groupId": 3,
-      "hours": 2
-    },
-    {
-      "id": 8,
-      "subjectId": 8,
-      "groupId": 3,
-      "hours": 2
-    },
-    {
-      "id": 9,
-      "subjectId": 1,
-      "groupId": 4,
-      "hours": 2
-    },
-    {
-      "id": 10,
-      "subjectId": 2,
-      "groupId": 4,
-      "hours": 2
-    },
-    {
-      "id": 11,
-      "subjectId": 3,
-      "groupId": 4,
-      "hours": 2
-    },
-    {
-      "id": 12,
-      "subjectId": 4,
-      "groupId": 5,
-      "hours": 2
-    },
-    {
-      "id": 13,
-      "subjectId": 5,
-      "groupId": 5,
-      "hours": 2
-    },
-    {
-      "id": 14,
-      "subjectId": 6,
-      "groupId": 5,
-      "hours": 2
-    },
-    {
-      "id": 15,
-      "subjectId": 7,
-      "groupId": 6,
-      "hours": 2
-    },
-    {
-      "id": 16,
-      "subjectId": 8,
-      "groupId": 6,
-      "hours": 2
-    }
-  ],
-  "schedules": [
-    {
-      "id": 1,
-      "subjectId": 1,
-      "groupId": 1,
-      "teacherId": 1,
-      "roomId": 1,
-      "day": 0,
-      "order": 1
-    },
-    {
-      "id": 2,
-      "subjectId": 2,
-      "groupId": 1,
-      "teacherId": 1,
-      "roomId": 1,
-      "day": 0,
-      "order": 2
-    },
-    {
-      "id": 3,
-      "subjectId": 3,
-      "groupId": 1,
-      "teacherId": 1,
-      "roomId": 1,
-      "day": 0,
-      "order": 3
-    },
-    {
-      "id": 4,
-      "subjectId": 4,
-      "groupId": 2,
-      "teacherId": 3,
-      "roomId": 2,
-      "day": 0,
-      "order": 1
-    },
-    {
-      "id": 5,
-      "subjectId": 5,
-      "groupId": 2,
-      "teacherId": 3,
-      "roomId": 2,
-      "day": 0,
-      "order": 2
-    },
-    {
-      "id": 6,
-      "subjectId": 6,
-      "groupId": 2,
-      "teacherId": 3,
-      "roomId": 2,
-      "day": 0,
-      "order": 3
-    },
-    {
-      "id": 7,
-      "subjectId": 7,
-      "groupId": 3,
-      "teacherId": 4,
-      "roomId": 3,
-      "day": 1,
-      "order": 1
-    },
-    {
-      "id": 8,
-      "subjectId": 8,
-      "groupId": 3,
-      "teacherId": 4,
-      "roomId": 3,
-      "day": 1,
-      "order": 2
-    },
-    {
-      "id": 9,
-      "subjectId": 1,
-      "groupId": 4,
-      "teacherId": 2,
-      "roomId": 4,
-      "day": 1,
-      "order": 1
-    },
-    {
-      "id": 10,
-      "subjectId": 2,
-      "groupId": 4,
-      "teacherId": 2,
-      "roomId": 4,
-      "day": 1,
-      "order": 2
-    }
-  ]
+  "teacherSubject": [],
+  "subjectGroup": [],
+  "schedules": []
 }
