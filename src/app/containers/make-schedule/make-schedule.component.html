@@ -1,36 +1,67 @@
-<div cdkDropListGroup>
-  <div style="display: flex">
-    @for (day of schedule; track day) {
-    <div class="example-container">
-      <h2>{{ day.name }}</h2>
+<div style="padding: 20px">
+  <h1>{{ group?.name }}</h1>
+  <div style="display: flex; gap: 10px">
+    <button [routerLink]="['/group']">Go To Group list</button>
+    <button (click)="save()">Save</button>
+  </div>
+  <div cdkDropListGroup>
+    <div style="display: flex; gap: 40px">
+      @for (day of schedule; track day) {
+      <div class="example-container">
+        <h2>{{ day.name }}</h2>
 
-      @for (time of day.value; track time) {
-      <div
-        cdkDropList
-        [cdkDropListData]="time"
-        class="example-list"
-        (cdkDropListDropped)="drop($event)"
-      >
-        @for (item of time; track item) {
-        <div class="example-box" cdkDrag>{{ item.name }}</div>
+        @for (time of day.value; track time) {
+        <div
+          cdkDropList
+          [cdkDropListData]="time"
+          class="example-list"
+          (cdkDropListDropped)="drop($event)"
+        >
+          @for (item of time; track item) {
+          <div class="example-box" cdkDrag>
+            {{ item.subject.subjectId | appNameById : subjects }}
+            <mat-select
+              [(ngModel)]="item.teacherId"
+              style="font-size: 12px; margin-top: 5px"
+            >
+              @for (teacher of item.teachers; track teacher) {
+              <mat-option [value]="teacher.teacherId">{{
+                teacher.teacherId | appNameById : teachers
+              }}</mat-option>
+              }
+            </mat-select>
+          </div>
+          }
+        </div>
         }
       </div>
       }
     </div>
-    }
 
-    <div class="example-container">
-      <h2>Subjects</h2>
+    <div>
+      <h2 style="margin-top: 20px">Subjects</h2>
 
       <div
         cdkDropList
-        [cdkDropListData]="subjects"
-        class="example-list"
+        [cdkDropListData]="subjectGroupTeacher"
+        class="subjects"
         style="height: auto; min-height: 40px"
         (cdkDropListDropped)="drop($event)"
       >
-        @for (item of subjects; track item) {
-        <div class="example-box" cdkDrag>{{ item.name }}</div>
+        @for (item of subjectGroupTeacher; track item) {
+        <div class="subjects__item" cdkDrag>
+          {{ item.subject.subjectId | appNameById : subjects }}
+          <mat-select
+            [(ngModel)]="item.teacherId"
+            style="font-size: 12px; margin-top: 5px"
+          >
+            @for (teacher of item.teachers; track teacher) {
+            <mat-option [value]="teacher.teacherId">{{
+              teacher.teacherId | appNameById : teachers
+            }}</mat-option>
+            }
+          </mat-select>
+        </div>
         }
       </div>
     </div>

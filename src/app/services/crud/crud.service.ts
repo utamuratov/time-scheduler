@@ -11,8 +11,6 @@ export class CRUDService {
   ) {}
 
   create(data: any) {
-    console.log(data);
-
     // id: uuidv4() - WE DO NOT NEED THIS BECAUSE JSON SERVER IS DOING IT BY DEFAULT
     return this.apiHttp.post(this.crudResourceUrl, data);
   }

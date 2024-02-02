@@ -1,10 +1,8 @@
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4214/`. The application will automatically reload if you change any of the source files.
+First of all run `json-server --watch db.json`. And run `ng serve` in the another terminal. Navigate to `http://localhost:4214/`.
 
 ## JSON SERVER
-
-Run `json-server --watch db.json`
 
 ## Draw.io
 

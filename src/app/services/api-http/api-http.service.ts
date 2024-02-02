@@ -12,16 +12,16 @@ export class ApiHttpService extends HttpClient {
     super(httpHandler);
   }
 
-  override get(url: string, options?: any): Observable<any> {
-    return super.get(`${this.baseUrl}${url}`, options);
+  override get<T>(url: string, options?: any) {
+    return super.get(`${this.baseUrl}${url}`, options) as Observable<T>;
   }
 
-  override post(url: string, body: any, options?: any): Observable<any> {
-    return super.post(`${this.baseUrl}${url}`, body, options);
+  override post<T = any>(url: string, body: any, options?: any) {
+    return super.post(`${this.baseUrl}${url}`, body, options) as Observable<T>;
   }
 
-  override put(url: string, body: any, options?: any): Observable<any> {
-    return super.put(`${this.baseUrl}${url}`, body, options);
+  override put<T = any>(url: string, body: any, options?: any) {
+    return super.put(`${this.baseUrl}${url}`, body, options) as Observable<T>;
   }
 
   override delete<T>(url: string, options?: any): Observable<T> {

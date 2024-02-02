@@ -11,27 +11,27 @@
       "id": 3
     },
     {
-      "firstName": "sfds",
-      "lastName": "fsdfs",
+      "firstName": "Mike",
+      "lastName": "Mikov",
       "id": 4
     },
     {
-      "firstName": "ddd",
-      "lastName": "ddd",
+      "firstName": "Wick",
+      "lastName": "Wickov",
       "id": 5
     },
     {
-      "firstName": "fd",
-      "lastName": "fdfd",
+      "firstName": "Nancy",
+      "lastName": "Nancyeva",
       "id": 6
     },
     {
-      "firstName": "rer",
-      "lastName": "rer",
+      "firstName": "Jonny",
+      "lastName": "Jonnyev",
       "id": 7
     },
     {
-      "firstName": "dsd",
+      "firstName": "Lucy",
       "lastName": "dsd",
       "id": 8
     },
@@ -300,9 +300,270 @@
       "id": 19,
       "name": "Group 19",
       "roomId": 19
+    },
+    {
+      "name": "Test",
+      "roomId": 1,
+      "id": 20
     }
   ],
-  "teacherSubject": [],
-  "subjectGroup": [],
-  "schedules": []
+  "teacherSubject": [
+    {
+      "teacherId": 1,
+      "subjectId": 1,
+      "hours": 10,
+      "id": 1
+    },
+    {
+      "teacherId": 3,
+      "subjectId": 2,
+      "hours": 20,
+      "id": 2
+    },
+    {
+      "teacherId": 9,
+      "subjectId": 2,
+      "hours": 6,
+      "id": 3
+    },
+    {
+      "teacherId": 1,
+      "subjectId": 3,
+      "hours": 10,
+      "id": 4
+    },
+    {
+      "teacherId": 3,
+      "subjectId": 2,
+      "hours": 4,
+      "id": 5
+    },
+    {
+      "subjectId": 3,
+      "teacherId": 5,
+      "hours": 10,
+      "id": 6
+    },
+    {
+      "subjectId": 3,
+      "teacherId": 8,
+      "hours": 6,
+      "id": 7
+    },
+    {
+      "subjectId": 11,
+      "teacherId": 3,
+      "hours": 15,
+      "id": 8
+    },
+    {
+      "teacherId": 4,
+      "subjectId": 8,
+      "hours": 5,
+      "id": 9
+    },
+    {
+      "teacherId": 1,
+      "subjectId": 8,
+      "hours": 12,
+      "id": 10
+    },
+    {
+      "subjectId": 5,
+      "teacherId": 3,
+      "hours": 5,
+      "id": 11
+    },
+    {
+      "subjectId": 5,
+      "teacherId": 7,
+      "hours": 6,
+      "id": 12
+    },
+    {
+      "teacherId": 5,
+      "subjectId": 6,
+      "hours": 18,
+      "id": 13
+    },
+    {
+      "teacherId": 8,
+      "subjectId": 6,
+      "hours": 4,
+      "id": 14
+    }
+  ],
+  "subjectGroup": [
+    {
+      "groupId": 2,
+      "subjectId": 2,
+      "hours": 4,
+      "id": 1
+    },
+    {
+      "groupId": 3,
+      "subjectId": 3,
+      "hours": 3,
+      "id": 2
+    },
+    {
+      "groupId": 5,
+      "subjectId": 3,
+      "hours": 5,
+      "id": 3
+    },
+    {
+      "groupId": 1,
+      "subjectId": 3,
+      "hours": 8,
+      "id": 5
+    },
+    {
+      "groupId": 1,
+      "subjectId": 5,
+      "hours": 4,
+      "id": 6
+    },
+    {
+      "groupId": 1,
+      "subjectId": 6,
+      "hours": 4,
+      "id": 7
+    },
+    {
+      "groupId": 1,
+      "subjectId": 8,
+      "hours": 5,
+      "id": 8
+    },
+    {
+      "groupId": 1,
+      "subjectId": 11,
+      "hours": 2,
+      "id": 9
+    }
+  ],
+  "schedules": [
+    {
+      "teacherId": 1,
+      "subjectId": 3,
+      "groupId": 1,
+      "roomId": 1,
+      "day": 0,
+      "order": 3,
+      "id": 1
+    },
+    {
+      "teacherId": 3,
+      "subjectId": 5,
+      "groupId": 1,
+      "roomId": 1,
+      "day": 1,
+      "order": 1,
+      "id": 2
+    }
+  ],
+  "groupSchedules": [
+    {
+      "id": 1,
+      "schedules": [
+        {
+          "teacherId": 1,
+          "subjectId": 3,
+          "groupId": 1,
+          "roomId": 1,
+          "day": 0,
+          "order": 1
+        },
+        {
+          "teacherId": 7,
+          "subjectId": 5,
+          "groupId": 1,
+          "roomId": 1,
+          "day": 1,
+          "order": 1
+        },
+        {
+          "teacherId": 8,
+          "subjectId": 6,
+          "groupId": 1,
+          "roomId": 1,
+          "day": 1,
+          "order": 2
+        },
+        {
+          "teacherId": 3,
+          "subjectId": 5,
+          "groupId": 1,
+          "roomId": 1,
+          "day": 1,
+          "order": 4
+        },
+        {
+          "teacherId": 3,
+          "subjectId": 11,
+          "groupId": 1,
+          "roomId": 1,
+          "day": 1,
+          "order": 5
+        },
+        {
+          "teacherId": 4,
+          "subjectId": 8,
+          "groupId": 1,
+          "roomId": 1,
+          "day": 2,
+          "order": 0
+        },
+        {
+          "teacherId": 1,
+          "subjectId": 3,
+          "groupId": 1,
+          "roomId": 1,
+          "day": 2,
+          "order": 3
+        },
+        {
+          "teacherId": 3,
+          "subjectId": 11,
+          "groupId": 1,
+          "roomId": 1,
+          "day": 3,
+          "order": 0
+        },
+        {
+          "teacherId": 1,
+          "subjectId": 3,
+          "groupId": 1,
+          "roomId": 1,
+          "day": 3,
+          "order": 3
+        },
+        {
+          "teacherId": 4,
+          "subjectId": 8,
+          "groupId": 1,
+          "roomId": 1,
+          "day": 4,
+          "order": 1
+        },
+        {
+          "teacherId": 5,
+          "subjectId": 6,
+          "groupId": 1,
+          "roomId": 1,
+          "day": 4,
+          "order": 3
+        },
+        {
+          "teacherId": 3,
+          "subjectId": 5,
+          "groupId": 1,
+          "roomId": 1,
+          "day": 5,
+          "order": 2
+        }
+      ]
+    }
+  ]
 }
