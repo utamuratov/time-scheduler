@@ -1,6 +1,6 @@
 ## Development server
 
-First of all run `json-server --watch db.json`. And run `ng serve` in the another terminal. Navigate to `http://localhost:4214/`.
+First of all run `npx json-server db.json`. And run `ng serve` in the another terminal. Navigate to `http://localhost:4214/`.
 
 ## JSON SERVER
 

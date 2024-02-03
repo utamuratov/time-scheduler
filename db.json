@@ -300,11 +300,6 @@
       "id": 19,
       "name": "Group 19",
       "roomId": 19
-    },
-    {
-      "name": "Test",
-      "roomId": 1,
-      "id": 20
     }
   ],
   "teacherSubject": [
@@ -441,26 +436,6 @@
       "subjectId": 11,
       "hours": 2,
       "id": 9
-    }
-  ],
-  "schedules": [
-    {
-      "teacherId": 1,
-      "subjectId": 3,
-      "groupId": 1,
-      "roomId": 1,
-      "day": 0,
-      "order": 3,
-      "id": 1
-    },
-    {
-      "teacherId": 3,
-      "subjectId": 5,
-      "groupId": 1,
-      "roomId": 1,
-      "day": 1,
-      "order": 1,
-      "id": 2
     }
   ],
   "groupSchedules": [

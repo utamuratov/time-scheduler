@@ -14,7 +14,6 @@ import {
   CdkDropList,
   CdkDropListGroup,
 } from '@angular/cdk/drag-drop';
-import { ScheduleService } from '../../services/schedule.service';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { NameByIdPipe } from '../../shared/pipes/name-by-id.pipe';
 import { TeacherSubject } from '../../models/teacher-subject.entity';
@@ -26,6 +25,7 @@ import { GroupSchedulesService } from '../../services/group-schedule.service';
 import { map } from 'rxjs';
 import { Option } from '../../shared/models/option.model';
 import { Group } from '../../models/group.entity';
+import { GeneralService } from '../../services/general.service';
 
 @Component({
   selector: 'app-make-schedule',
@@ -58,7 +58,7 @@ export class MakeScheduleComponent implements OnInit {
   groupSchedules?: GroupSchedules;
   group?: Group;
 
-  $schedule = inject(ScheduleService);
+  $general = inject(GeneralService);
   $groupSchedules = inject(GroupSchedulesService);
   $route = inject(ActivatedRoute);
   cd = inject(ChangeDetectorRef);
@@ -80,7 +80,7 @@ export class MakeScheduleComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.$schedule.getGroupById(this.groupId).subscribe((group) => {
+    this.$general.getGroupById(this.groupId).subscribe((group) => {
       this.group = group;
     });
 
@@ -111,7 +111,7 @@ export class MakeScheduleComponent implements OnInit {
   }
 
   private makeGroupSubjects(groupId: number) {
-    return this.$schedule.getSubjectsByGroup(groupId).pipe(
+    return this.$groupSchedules.getSubjectsByGroup(groupId).pipe(
       map((subjects) => {
         const subjectGroupTeacher: SubjectGroupTeacher[] = [];
         subjects.forEach((subject) => {

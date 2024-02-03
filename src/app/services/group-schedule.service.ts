@@ -1,25 +1,15 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Group } from '../models/group.entity';
-import {
-  Observable,
-  catchError,
-  forkJoin,
-  map,
-  mergeMap,
-  of,
-  switchMap,
-} from 'rxjs';
-import { Teacher } from '../models/teacher.entity';
-import { TeacherSubject } from '../models/teacher-subject.entity';
-import { SubjectGroup } from '../models/subject-group.entity';
-import { GroupSchedules, Schedule } from '../models/schedule.entity';
-import { Subject } from '../models/subject.entity';
+import { catchError, map, of } from 'rxjs';
+import { GroupSchedules } from '../models/schedule.entity';
 import { ApiHttpService } from './api-http/api-http.service';
+import { GeneralService } from './general.service';
 
 @Injectable({ providedIn: 'root' })
 export class GroupSchedulesService {
-  constructor(protected apiHttp: ApiHttpService) {}
+  constructor(
+    protected apiHttp: ApiHttpService,
+    private $general: GeneralService
+  ) {}
 
   delete(groupId: number) {
     return this.apiHttp.delete<GroupSchedules>(`groupSchedules/${groupId}`);
@@ -44,5 +34,13 @@ export class GroupSchedulesService {
 
   getAll() {
     return this.apiHttp.get<GroupSchedules[]>(`groupSchedules`);
+  }
+
+  getSubjectsByGroup(groupId: number) {
+    return this.$general.getGroupSubject().pipe(
+      map((subjects) => {
+        return subjects.filter((subject) => subject.groupId === groupId);
+      })
+    );
   }
 }
