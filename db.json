@@ -539,6 +539,14 @@
           "order": 3
         },
         {
+          "teacherId": 5,
+          "subjectId": 6,
+          "groupId": 1,
+          "roomId": 1,
+          "day": 5,
+          "order": 0
+        },
+        {
           "teacherId": 3,
           "subjectId": 5,
           "groupId": 1,

@@ -6,7 +6,7 @@ import { groupResolver } from './resolvers/group.resolver';
 import { teachersSubjectsResolver } from './resolvers/teacher-subject.resolver';
 
 export const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'make-schedule/1' },
+  { path: '', pathMatch: 'full', redirectTo: 'subject' },
   {
     path: 'make-schedule/:groupId',
     loadComponent: () =>
